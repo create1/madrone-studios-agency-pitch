@@ -76,6 +76,8 @@ body {
     right: 0;
     bottom: 0;
     overflow: hidden;
+    z-index: 0;
+    opacity: 0.55;
 }
 
 .hero-image {
@@ -83,7 +85,8 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    animation: zoomIn 20s ease-out infinite alternate;
+    opacity: 0.4 !important;
+    animation: zoomIn 20s ease-out infinite alternate, imageLoad 0.8s ease forwards;
 }
 
 @keyframes zoomIn {
@@ -106,7 +109,7 @@ body {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     text-align: center;
     padding: 0 2rem;
 }
@@ -126,6 +129,8 @@ body {
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 1s ease forwards;
+    color: rgba(255, 255, 255, 1);
+    font-size: 35px;
 }
 
 .hero-line:nth-child(1) {
@@ -134,6 +139,7 @@ body {
 
 .hero-line:nth-child(2) {
     animation-delay: 0.4s;
+    border-radius: 30px;
 }
 
 @keyframes fadeInUp {
@@ -144,7 +150,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-size: 55px;
     font-weight: 300;
     margin-bottom: 1rem;
     opacity: 0;
@@ -301,7 +307,7 @@ body {
 }
 
 .section-title {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: 70px;
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -381,9 +387,10 @@ body {
 
 .cases-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 4rem;
+    align-items: start;
 }
 
 .case-card {
@@ -393,6 +400,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .case-card:hover {

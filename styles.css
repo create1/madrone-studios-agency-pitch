@@ -307,7 +307,7 @@ body {
 }
 
 .section-title {
-    font-size: 70px;
+    font-size: 90px;
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -317,7 +317,7 @@ body {
 
 .section-subtitle {
     font-size: clamp(1.2rem, 2vw, 1.8rem);
-    color: var(--text-secondary);
+    color: rgba(220, 219, 219, 1);
     font-weight: 300;
     margin-bottom: 3rem;
 }

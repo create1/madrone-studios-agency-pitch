@@ -390,7 +390,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 4rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .case-card {
@@ -442,7 +442,7 @@ body {
     font-weight: 400;
     margin-bottom: 0;
     letter-spacing: 0.05em;
-    min-height: 4.5rem;
+    height: 4.5rem;
     display: flex;
     align-items: flex-start;
 }
